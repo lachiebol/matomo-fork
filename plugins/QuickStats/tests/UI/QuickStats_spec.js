@@ -10,7 +10,6 @@
 describe("QuickStats", function () {
     this.timeout(0);
 
-    var generalParams = 'idSite=1&period=day&date=2010-01-03';
 
     before(function () {
         testEnvironment.pluginsToLoad = ['QuickStats'];
