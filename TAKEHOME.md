@@ -17,9 +17,17 @@ No dependencies added, just make sure the plugin is built.
 ## Potential Improvements
 - Delay loading until page content has loaded
 - Refresh button to pull data again
-- 
 
 ## UI Tests
 UI tests have been added, I've added one that checks for the button on the screen, and one that checks the modal will load.
 
 I'm not sure if the environment was setup correctly but I had to edit some config files to get the tests running.
+
+
+# Testing
+
+- Unit tests, test methods like toggleQuickStatsModal to ensure they're opening the modal. These would go in a /tests/unit folder in /src/. I would use tools like Jest or Mocha, and a given then when pattern.
+
+- Integration tests, testing the modal opens and populates the data correctly. These would go in a tests/integration folder in /src/. Same as above but with more general test cases.
+
+- End-to-end tests, testing real interactions with the model across different platforms. I would use tools like Cypress or Playwright
