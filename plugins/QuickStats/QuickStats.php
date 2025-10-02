@@ -9,7 +9,8 @@
 
 namespace Piwik\Plugins\QuickStats;
 
-use Piwik\View;
+use Piwik\Access;
+use Piwik\Piwik;
 
 class QuickStats extends \Piwik\Plugin
 {
@@ -21,10 +22,13 @@ class QuickStats extends \Piwik\Plugin
         ];
     }
 
-
     public function addQuickStatsElement(&$out) {
 
-        $out .= "<div vue-entry=\"QuickStats.QuickStatsModal\"></div>";
+        // Anonymous user with no access at all should be restricted, and it should not show on the login page
+        $sitesWithAccess=Access::getInstance()->getSitesIdWithAtLeastViewAccess();
+        if (count($sitesWithAccess)&&Piwik::getModule()!=='Login') { 
+            $out .= "<div vue-entry=\"QuickStats.QuickStatsModal\"></div>";
+        }
     }
 
 }
