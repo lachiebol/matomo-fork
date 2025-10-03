@@ -37,7 +37,7 @@ For subsequent test runs use:
 `ddev matomo:console tests:run-ui QuickStats --persist-fixture-data`
 
 
-**I've just realised the tests will not pass, since I've already submitted my solution I'll leave it as is.**
+**I've just realised the tests will not pass if anything outside of my components change, since I've already submitted my solution I'll leave it as is.**
 
 **What I would do if I had more time is isolate the components I'm testing in the screenshot, using screenshotSelector() and css rules to hide anything that could change from test to test.**
 
