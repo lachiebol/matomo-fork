@@ -142,7 +142,6 @@ export default defineComponent({
         } else error.value = 'Invalid response from API';
       }).catch((err) => {
         error.value = err;
-        isLoading.value = false;
       }).finally(() => {
         isLoading.value = false;
       });
