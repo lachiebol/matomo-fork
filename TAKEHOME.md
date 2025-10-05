@@ -12,9 +12,9 @@ I assumed if a user has no view access or they are on the login module, then the
 
 ## Setup / Configuration
 
-No dependencies added, just make sure the plugin is built with this command:
+No dependencies added, just make sure the plugin is activated with this command:
 
-`ddev matomo:console vue:build QuickStats`
+`ddev matomo:console plugin:activate QuickStats`
 
 ## Potential Improvements
 
